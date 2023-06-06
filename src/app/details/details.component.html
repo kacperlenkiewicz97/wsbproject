@@ -1,0 +1,7 @@
+<div style="height: 10vh; text-align: center;">
+    <div *ngIf="detailsPrice!=0; else elseBlock">
+        <h2>Cena: {{detailsName}} w PLN to: {{detailsPrice*4.23 | number:'1.0-0'}}zł</h2>
+        <button (click)="showCheaperProducts()" mat-raised-button color="primary">Pokaż tańsze produkty</button>
+    </div>
+    <ng-template #elseBlock> <h2>Kliknij na wiersz aby poznać cenę w PLN</h2></ng-template>
+</div>
